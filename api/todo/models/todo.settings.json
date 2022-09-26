@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "todos",
+  "info": {
+    "name": "Todo",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "it should be filled out",
+      "maxLength": 80,
+      "minLength": 2
+    },
+    "due": {
+      "type": "date",
+      "required": true,
+      "default": "2022-09-01T07:00:00.000Z"
+    },
+    "done": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "priority": {
+      "type": "enumeration",
+      "enum": [
+        "minor",
+        "regular",
+        "critical"
+      ],
+      "required": true,
+      "default": "regular"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}
