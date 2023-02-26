@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "name": "tags",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contacts": {
+      "via": "tags",
+      "collection": "contacts",
+      "dominant": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "user": {
+      "private": true,
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "tags"
+    }
+  }
+}

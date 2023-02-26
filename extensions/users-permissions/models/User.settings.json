@@ -58,6 +58,14 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
+    },
+    "contacts": {
+      "via": "user",
+      "collection": "contacts"
+    },
+    "tags": {
+      "via": "user",
+      "collection": "tags"
     }
   }
 }

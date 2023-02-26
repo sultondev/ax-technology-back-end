@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contacts",
+  "info": {
+    "name": "Contacts",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "minLength": 2,
+      "maxLength": 30
+    },
+    "createdAt": {
+      "type": "date"
+    },
+    "phone": {
+      "type": "string",
+      "unique": false,
+      "minLength": 6,
+      "maxLength": 11
+    },
+    "tags": {
+      "via": "contacts",
+      "collection": "tags"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "contacts"
+    }
+  }
+}
