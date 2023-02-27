@@ -18,7 +18,8 @@
       "dominant": true
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "user": {
       "private": true,
